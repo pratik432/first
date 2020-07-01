@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day1:javascript</title>
+	<script type="text/javascript">/*define two variables print them in console*/
+		var a=1;
+		var b=2;					/*output in console: 1 2*/
+		console.log(a,b)
+
+		function redirect()
+		{
+ 			window.location.href ="js.html" /*document js in separate page*/
+		}
+
+		let arr = [1,2,3,4,5]/*Element at index 3 and cast to string*/
+		console.log(arr[3])
+		 var x = arr.toString();
+  		 document.getElementById("numtostr") ;  /*output in console: 4*/
+
+  		 function validateform(){  
+			var name=document.myform.name.value;  
+			var password=document.myform.password.value;  
+  
+			if (name==null || name==""){  
+  				alert("Name can't be blank");  
+  				return false;  
+			}else if(password.length<6){  
+  				alert("Password must be at least 6 characters long.");  
+  				return false;  
+ 								 } 
+ 			document.getElementById("GF").innerHTML =  "<p><b>Math.abs(-4.7):</b> " + Math.abs(-4.7) + "</p>" + "<p><b>Math.ceil(4.4):</b> " + Math.ceil(4.4) + "</p>" + 
+        "<p><b>Math.floor(4.7):</b> " + Math.floor(4.7) + "</p>" + 
+        "<p><b>Math.sin(90 * Math.PI / 180):</b> " +  
+                Math.sin(90 * Math.PI / 180) + "</p>" + 
+        "<p><b>Math.min(0, 150, 30, 20, -8, -200):</b> " + 
+                Math.min(0, 150, 30, 20, -8, -200) + "</p>" + 
+        "<p><b>Math.random():</b> " + Math.random() + "</p>"; 
+					}  
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	</script>
+	<!-- create a function to call above activity -->
+<button type="button" name="redirectme" onclick="redirect();">JavaScript</button> 
+<p id="numtostr"></p>
+
+<h4 style="text-align: center;">FORM VALIDATION</h4>
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+Name: <input type="text" name="name"><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register">  
+</form>  <br>
+
+<p>MATH function</p>
+ <p id="GF" style = "color:green;"></p> 
+</body>
+</html>
