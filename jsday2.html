@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jsday2</title>
+	<script type="text/javascript">
+		var day = function(sp){
+today = new Date();
+var da = today.getDate();
+var mon = today.getMonth()+1; 
+var year = today.getFullYear();
+
+if(da<10) da='0'+da;
+if(mon<10) mon='0'+mon;
+return (mon+sp+da+sp+year);
+};
+console.log(day('/'));
+console.log(day('-'));
+
+function keydownevent()
+	{
+		document.getElementById("id1");
+		alert("Press key");
+	}
+	var num = window.prompt("Enter number :");
+	if(num>10&&num<100){
+
+      document.write("the fibonacci series is" +fibonacci(num));
+  						}
+
+      else{
+
+      	document.write("number is not between 10 and 100");
+      	}
+
+		function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+
+    
+
+	</script>
+</head>
+<body onload="window.alert('page loaded(onloadevent)');">
+
+<br><br>Enter text  to test keydownevent:<input type="text" id="id1" onkeydown="keydownevent()" />
+
+ 
+
+
+</body>
+</html>
